@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	html {
+		--color-text: #0d0f1c;
+		--color-background: #e4e5f1;
+		--color-primary: #2f3960;
+		--color-secondary: #c68bc1;
+		--color-accent: #9d4d79;
+	}
+
+	html[data-theme="dark"] {
+		--color-text: #e4e6f2;
+		--color-background: #0d0e1a;
+		--color-primary: #a0aad0;
+		--color-secondary: #74396f;
+		--color-accent: #b2618d;
+	}
+}

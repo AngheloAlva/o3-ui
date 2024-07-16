@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { inter } from "@/config"
 
+import { Navbar } from "@/components"
+
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -14,8 +16,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
-			<body className={inter.className}>{children}</body>
+		<html lang="en" data-theme="dark">
+			<body className={`${inter.className} bg-background`}>
+				<Navbar />
+				{children}
+			</body>
 		</html>
 	)
 }
